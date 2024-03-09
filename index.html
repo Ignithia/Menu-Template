@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/media/favicon.ico" />
+
+    <script src="./components.js"></script>
+
+
+    <title>3D Menu</title>
+</head>
+<script>
+    // This template is made by github user Ignithia
+    // User: https://github.com/Ignithia
+    // Template's repository: 
+</script>
+<body>
+    <a-scene raycaster="objects: .interactive">
+        <a-assets>
+            <audio id="audio" src="./assets/audio/Alex-Productions - Coffee.mp3" ></audio>
+            <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+            <audio id="honk" src="../assets/audio/honk.mp3" ></audio>
+            <img id="logo" src="./assets/media/dumbooctopus_lg.png">
+        </a-assets>
+        <a-entity environment="preset: starry; grid: none; ground: hills; groundTexture: walkernoise; groundColor: #50C233; groundColor2: #37Ae0F; groundYScale: 10; lightning: none; playArea: 1"></a-entity>
+        <a-light type="ambient" color="white" intensity="0.3"></a-light>
+        
+      <a-sound id="sound" src="#audio" loop="true" volume="1" position="0 0 0" autoplay="true"></a-sound>
+
+      
+        <!--Main page-->
+        <a-circle material="opacity: 0.3; transparent: true" position="0 1.85 -0.5" scale="0.065 0.065 0" class="interactable" id="main-circle" visible="false" sound="on: click; src: #click-sound"
+        select-page>
+        <a-text value="Main" align="center"></a-text>
+        </a-circle>
+
+        <!--english-->
+
+        <a-circle class="interactable" id="english-main" material="opacity: 0.3; transparent: true" visible="false" position="0.15 1.70 -0.5" scale="0.065 0.065 0" open-selection="btn:english" sound="on: click; src: #click-sound">
+            <a-text value="english" align="center" ></a-text>
+        </a-circle>
+        
+        <a-circle class="interactable" id="english-home" position="0.40 2 -0.50" rotation="0 -10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="Home" align="center" ></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="english-hobby" position="0.40 1.85 -0.50" rotation="0 -10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="Hobby" align="center" ></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="english-exp" position="0.40 1.7 -0.50" rotation="0 -10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="Experience" align="center" scale="0.9 0.9 0.9"></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="english-resume" position="0.40 1.55 -0.50" rotation="0 -10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="resume" align="center" ></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="english-contact" position="0.40 1.40 -0.50" rotation="0 -10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="contact" align="center" scale="0.9 0.9 0.9"></a-text>
+        </a-circle >
+
+        <!--Logo-->
+        <a-plane class="interactable" position="0 1.70 -0.50" rotation="0 0 45" scale="0.095 0.095 0" material="opacity: 0.5; transparent: true" sound="on: click; src: #honk" open-mainbuttons></a-plane>
+        <a-image class="interactable" src="#logo" position="0.01 1.70 -0.49" scale="0.095 0.065 0" sound="on: click; src: #honk" open-mainbuttons></a-image>
+
+        <!--dutch-->
+        <a-circle class="interactable" id="dutch-main" material="opacity: 0.3; transparent: true" position="-0.15 1.7 -0.5" scale="0.065 0.065 0" visible="false" open-selection="btn:dutch" sound="on: click; src: #click-sound">
+            <a-text value="nederlands" align="center" scale="0.9 0.9 0.9"></a-text>
+        </a-circle>
+        
+        <a-circle class="interactable" id="dutch-home" position="-0.40 2 -0.50" rotation="0 10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="Thuis" align="center" ></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="dutch-hobby" position="-0.40 1.85 -0.50" rotation="0 10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="Hobby" align="center" ></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="dutch-exp" position="-0.40 1.7 -0.50" rotation="0 10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="Ervaring" align="center" scale="0.9 0.9 0.9"></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="dutch-resume" position="-0.40 1.55 -0.50" rotation="0 10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="CV" align="center" ></a-text>
+        </a-circle >
+        <a-circle class="interactable" id="dutch-contact" position="-0.40 1.40 -0.50" rotation="0 10 0" material="opacity: 0.3; transparent: true" visible="false" scale="0.065 0.065 0" select-page sound="on: click; src: #click-sound">
+            <a-text value="contact" align="center" ></a-text>
+        </a-circle >
+
+        <!--Sound-->
+        <a-circle material="opacity: 0.3; transparent: true" visible="false" position="0 1.55 -0.5" scale="0.065 0.065 0" class="interactable" id="sound-circle" sound="on: click; src: #click-sound" audiohandler>
+        <a-text value="Toggle music" align="center"></a-text>
+        </a-circle>
+
+        <a-camera wasd-controls-enabled="false" cursor="rayOrigin: mouse;" raycaster="objects: .interactable;" position="0 1.7 0">
+        </a-camera>
+    </a-scene>
+</body>
+</html>

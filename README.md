@@ -8,3 +8,5 @@ To edit and learn how it works I recommend learning A-Frame with their documenta
 I hope you all enjoy the template and do wonderous things with it.
 
 Kind regards, Ignithia.
+
+![image](https://github.com/Ignithia/Menu-Template/assets/75039029/850e9d7c-f4d9-4a70-b977-9c15c32e7fbc)
